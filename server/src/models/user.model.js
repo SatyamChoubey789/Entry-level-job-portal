@@ -61,6 +61,10 @@ const UserSchema = new mongoose.Schema(
       type: Number, // Years of experience (if job seeker)
       default: 0,
     },
+    isVerified:{
+      type: Boolean,
+      default: false,
+    },
     company: {
       type: String, // Relevant for employers
     },

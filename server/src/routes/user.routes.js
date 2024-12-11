@@ -1,16 +1,10 @@
 const Router = require('express');
 const router = Router();
-const {
-  registerUser,
-  loginUser,
-  logoutUser,
-} = require('../controllers/user.controller');
 
-// common routes
-router.route('/register').post(registerUser);
-router.route('/login').post(loginUser);
+// import routes
+const { getProfile, updateProfile } = require('../controllers/user.controller');
 
-// secured routes
-router.route('/logout').post(logoutUser);
+router.get('/profile', getProfile);
+router.put('/profile', updateProfile);
 
 module.exports = router;

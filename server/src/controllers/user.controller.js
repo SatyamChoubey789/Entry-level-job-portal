@@ -1,9 +1,7 @@
-const registerUser = async () => {};
-const loginUser = async () => {};
-const logoutUser = async () => {};
+const getProfile = () => {};
+const updateProfile = () => {};
 
 module.exports = {
-  registerUser,
-  loginUser,
-  logoutUser,
+  getProfile,
+  updateProfile,
 };
