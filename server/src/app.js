@@ -29,9 +29,12 @@ app.use(express.static('public'));
 
 // routes importation
 const userRoutes = require('./routes/user.routes');
+const authRoutes = require('./routes/auth.routes');
+
 
 // routes declaration
 app.use('/api/v1/users', userRoutes);
+app.use('/api/v1/users', authRoutes);
 
 process.on('uncaughtException', (err) => {
   logger.error(`Uncaught Exception: ${err.message}`);
